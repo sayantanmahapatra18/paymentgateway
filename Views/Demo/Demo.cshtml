@@ -1,0 +1,25 @@
+﻿@model PayUmoneytry.Models.DemoModel
+@{
+    ViewBag.Title = "Demo";
+}
+
+<h2>Payment Details</h2>
+@using (Html.BeginForm())
+{
+    <div style="margin-left:20px">
+
+        @Html.Label("Full Name")<br />
+        @Html.TextBox("txtfirstname")<br />
+        @Html.ValidationMessageFor(model => model.FirstName, " ", new { @class = "text-danger" })
+        @Html.Label("Email Id")<br />
+        @Html.TextBox("txtemail")<br />
+        @Html.ValidationMessageFor(model => model.Email, " ", new { @class = "text-danger" })
+        @Html.Label("Phone")<br />
+        @Html.TextBox("txtphone")<br />
+        @Html.Label("Amount")<br> @Html.TextBox("txtamount")<br />
+        <br>
+        <div> <a style=" width: 135px; background-color: #BD2A2A; text-align: center; font-weight: 800; padding: 11px 0px; color: white; font-size: 12px; display: inline-block; text-decoration: none; " href='https://pmny.in/GIoKBBCqWVep'> Pay Now </a> </div> <br />
+    </div>
+
+
+}  
